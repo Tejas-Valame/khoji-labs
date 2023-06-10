@@ -8,12 +8,25 @@
 
     </head>    
    
-            
-            
-
-        <body>
-            <h1>Welcome to my spring app boys</h1>
-            <a href="/logout">Logout</a>
-
+    <body>
+        <h1>Congratulations on bypassing the security manager.</h1>
+        <h1>Add New Employee</h1>  
+<form th:action="@{/save}" th:object="${employee}" method="post">  
+<table>  
+<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>  
+<tr><td>Password:</td><td><input type="password" name="password"/></td></tr>  
+<tr><td>Email:</td><td><input type="email" name="email"/></td></tr>  
+<tr><td>Country:</td><td>  
+<select name="country" style="width:150px">  
+<option>India</option>  
+<option>USA</option>  
+<option>UK</option>  
+<option>Other</option>  
+</select>  
+</td></tr>  
+<tr><td colspan="2"><input type="submit" value="Save Employee"/></td></tr>  
+</table>  
+</form> 
+        <a href="/view">View All</a>
     </body>    
 </html>  
