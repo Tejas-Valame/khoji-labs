@@ -15,8 +15,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
 
     <body>
-        <div>Edit Page</div>
-
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <h1>Edit Pannel</h1>
         <form th:action="@{/update}" th:object="${employee}" method="POST">
             <table>
                 <tr><td>
@@ -53,6 +54,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </form>
         <hr/>
         <a th:href="@{/view}">Back to list</a>
-
+    </div>
+</div>
     </body>
 </html>
