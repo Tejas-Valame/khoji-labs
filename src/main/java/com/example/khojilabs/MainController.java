@@ -54,7 +54,6 @@ public class MainController {
     
     @PostMapping("/update")
     public String update(@ModelAttribute Employee e){
-        er.delete(e);
         er.save(e);
         return "redirect:/view?update=success";
     }
